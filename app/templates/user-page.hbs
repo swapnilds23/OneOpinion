@@ -1,0 +1,28 @@
+<!-- vinay code started -->
+<div>
+  <div class="container col-xs-8">
+
+    <form class="well form-horizontal" action=" " method="post" id="contact_form">
+      <fieldset>
+
+        <!-- Form Name -->
+        <legend>
+          <center>
+            <h2><b>List of Products</b></h2></center>
+        </legend><br>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label"></label>
+          <div class="col-md-8 inputGroupContainer">
+            <div class="input-group col-md-4">
+              {{#each model as |productlist|}}
+                <a class="list-group-item list-group-item-info" href="{{productlist.productName}}/product" role="button">{{productlist.productName}}</a>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+</div>

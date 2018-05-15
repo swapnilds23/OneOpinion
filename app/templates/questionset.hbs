@@ -1,0 +1,79 @@
+{{#if isClicked}}
+  <h3>{{number}}{{' '}}{{question}}</h3>
+  <h4>{{#radio-button
+  value= optionA
+  groupValue=ans
+  changed="selectedAns"}}
+  {{' '}}{{ansA}}
+{{/radio-button}}</h4>
+
+  <h4>{{#radio-button
+  value= optionB
+  groupValue=ans
+  changed="selectedAns"}}
+  {{' '}}{{ansB}}
+{{/radio-button}}</h4>
+
+  <h4>{{#radio-button
+  value= optionC
+  groupValue=ans
+  changed="selectedAns"}}
+  {{' '}}{{ansC}}
+{{/radio-button}}</h4>
+
+{{/if}}
+
+<h2>{{message}}</h2>
+
+<!-- {{#if isStart}}
+<h3>{{'Please Start your survey by clicking on Start button'}}</h3>
+<h4><button {{action "start"}}>Start</button></h4>
+<button class="btn btn-warning btn-lg btn-block" Style="width: 200px;" {{action "start"}}>Start Survey</button>
+{{/if}} -->
+
+{{#if isNext}}
+  <h4><button class="btn btn-warning" disabled={{isDisabled}} {{action "next"}}>Next</button></h4>
+{{/if}}
+
+{{#if isEnd}}
+  <h4><button class="btn btn-warning" disabled={{isDisabled}} {{action "end"}}>End</button></h4>
+{{/if}}
+
+{{#if isBack}}
+<h4><button class="btn btn-warning" {{action "back"}}>back</button></h4>
+{{/if}}
+
+<!-- Vinay code start -->
+  {{#if isStart}}
+<div>
+  <div class="container col-xs-10">
+
+    <form class="well form-horizontal" action=" " method="post" id="contact_form">
+      <fieldset>
+
+        <!-- Form Name -->
+        <legend>
+          <center>
+            <h2><b>Please Start your survey </b></h2></center>
+        </legend><br>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label"></label>
+          <div class="col-md-8 inputGroupContainer">
+            <div class="input-group col-md-4">
+
+                <!-- <h4><button {{action "start"}}>Start</button></h4 -->
+                <button class="btn btn-warning btn-lg btn-block" Style="width: 200px;" {{action "start"}}>Start Survey</button>
+
+            </div>
+          </div>
+        </div>
+
+
+      </fieldset>
+    </form>
+  </div>
+</div>
+    {{/if}}
+
+<!-- vinay code end -->

@@ -1,0 +1,74 @@
+<!--
+  <div class="container col-xs-12">
+
+    <form class="well form-horizontal" action=" " method="post" id="contact_form">
+      <fieldset>
+
+        <!--Form Name -->
+        <!-- <legend>
+          <center>
+            <h2><b>Product Description</b></h2></center>
+        </legend><br> -->
+
+
+<!-- <div class="row" align="center">
+ <div class="col-sm-12">
+     <button class="btn btn-primary btn-sx" id="createQuiz" class="btn btn-primary" Style="width: 100px;" {{action "startQuiz" model.productName}}>Start Quiz</button>
+  </div>
+</div> -->
+
+<!-- end -->
+<div>
+  <div class="container col-xs-12">
+
+    <form class="well form-horizontal" action=" " method="post" id="contact_form">
+      <fieldset>
+
+        <!-- Form Name -->
+        <legend>
+          <center>
+            <h2><b>Product Description</b></h2></center>
+        </legend><br>
+
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Product Name:</label>
+          <div class="col-md-8 inputGroupContainer">
+            <div class="input-group">
+              <label class="form-control-static text-primary">{{model.productName}}</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Product Description:</label>
+          <div class="col-md-8 inputGroupContainer">
+            <div class="input-group">
+              <label class="form-control-static text-primary">{{model.productDesc}}</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button -->
+        {{#if isUser}}
+        <div class="form-group">
+          <label class="col-md-4 control-label"></label>
+          <div class="col-md-4"><br>
+            <!-- <button type="submit" class="btn btn-warning"  {{action "addProduct"}}>Add<span ></span></button> -->
+            <button class="btn btn-warning" id="createQuiz" class="btn btn-primary" Style="width: 100px;" {{action "startQuiz" model.productName}}>Start Survey</button>
+          </div>
+        </div>
+        {{else}}
+<!-- newly added-->
+<div class="row" align="center">
+<div class="col-sm-12">
+     <button class="btn btn-primary btn-sx" id="createQuiz" class="btn btn-primary" Style="width: 120px;" {{action "createQuiz" model.productName}}>Create Survey</button>
+      <button id="viewGraph" class="btn btn-danger" Style="width: 100px;" {{action "report" model.productName}}>View Report</button>
+  </div>
+</div>
+{{/if}}
+
+      </fieldset>
+    </form>
+  </div>
+</div>

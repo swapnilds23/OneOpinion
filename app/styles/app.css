@@ -1,0 +1,47 @@
+@import "bootstrap";
+.container {
+  height: 100%;
+}
+
+.main {
+  background-image: url("/assets/images/home.jpg");
+  height: 530px;
+  width: 100%;
+  background-size: cover;
+}
+
+#index1 {
+  /* text-transform: uppercase; */
+  position: absolute;
+  left: 100px;
+  top: 15px;
+}
+
+#index2 {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+
+/* .jumbotron {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 85%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/assets/images/chartbck.jpg");
+} */
+
+.progress {
+  padding: 2px;
+  border-radius: 2px;
+  height: 40px;
+}
+
+#opt3 {
+  position: relative;
+  top: 50%;
+}

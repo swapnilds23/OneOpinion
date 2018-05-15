@@ -1,0 +1,41 @@
+<!-- vinay code started -->
+<div>
+  <div class="container col-xs-12">
+    <form class="well form-horizontal" action=" " method="post" id="contact_form">
+      <fieldset>
+
+        <!-- Form Name -->
+        <legend>
+          <center>
+            <h2><b>Survey Quetionnaire</b></h2></center>
+        </legend><br>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label"></label>
+          <div class="col-md-8 inputGroupContainer">
+            <div class="input-group">
+              {{#each model as |viewquiz|}}
+                <div>
+                  <h3>{{'Q: '}}{{viewquiz.question}}</h3>
+                </div>
+                <div>
+                  <h4><input type="radio" disabled name="optionA" id=optionA>  {{viewquiz.answer1}}</h4> {{' '}}
+                  <h4><input type="radio" disabled name="optionB" id=optionB>  {{viewquiz.answer2}}</h4> {{' '}}
+                  <h4><input type="radio" disabled name="optionC" id=optionC>  {{viewquiz.answer3}}</h4>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label"></label>
+          <div class="col-md-4"><br>
+            <button class="btn btn-warning btn-lg btn-block" Style="width: 100px;" {{action 'back'}}>Back</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

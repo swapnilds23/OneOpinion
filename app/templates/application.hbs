@@ -1,0 +1,36 @@
+<div class='container'>
+
+
+  <div class="container-fluid">
+    <div>
+    {{#link-to 'index' class="navbar-brand" }}<img src="/assets/images/one.PNG">{{/link-to}}
+    </div>
+
+    <!-- <div class="collapse navbar-collapse" id="main-navbar"> -->
+      <!-- <ul class="nav navbar-nav">
+            {{#link-to 'index' tagName="li"}}<a href="">Home</a>{{/link-to}}
+            {{#link-to 'sign-up' tagName="li"}}<a href="">Signup</a>{{/link-to}}
+            {{#link-to 'sign-in' tagName="li"}}<a href="">Login</a>{{/link-to}}
+      </ul> -->
+
+      <ul class="nav navbar-nav pull-right">
+
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        {{#if isLoggedIn}}
+          {{#link-to 'index' tagName="li" invokeAction=(action 'logout') }}<img src="/assets/images/login.PNG">logout{{/link-to}}
+        {{else}}
+          {{#link-to 'sign-in' tagName="li" }}<img src="/assets/images/login.PNG"> Member Login{{/link-to}}
+          {{#link-to 'sign-up' tagName="li" }}<img src="/assets/images/signup.PNG">Signup{{/link-to}}
+        {{/if}}
+      </ul>
+    <!-- </div> -->
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+
+
+
+
+  {{outlet}}
+</div>

@@ -1,0 +1,74 @@
+<div class="container jumbotron">
+  <!-- style="background:linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);" -->
+  <div class="row">
+    <div class="col-xs-3">
+      <div id="products">
+        <div>
+          <h3><b>List of Products</b></h3>
+        </div>
+
+        <div class="list-group" class="col-xs-7">
+          {{#each model as |productlist|}}
+            <a class="list-group-item list-group-item-info" href="{{productlist.productName}}/product" role="button">{{productlist.productName}}</a>
+          {{/each}}
+        </div>
+      </div>
+      <h3 class="col-xs-6"><button class="btn btn-default btn-warning" {{action "showMenu"}}>Add Product</button></h3>
+    </div>
+
+    <div class="col-xs-9">
+      {{#if isClicked}}
+        <div class="container col-xs-12">
+
+          <form class="well form-horizontal" action=" " method="post" id="contact_form">
+            <fieldset>
+
+              <!-- Form Name -->
+              <legend>
+                <center>
+                  <h2><b>Product Description</b></h2></center>
+              </legend><br>
+
+
+              <div class="form-group">
+                <label class="col-md-4 control-label">Product Name</label>
+                <div class="col-md-8 inputGroupContainer">
+                  <div class="input-group">
+                    <!-- <input type="text" name="product" class="form-control" placeholder="Enter the product name"> -->
+                    {{input type = "text"  placeholder = "Enter the product name" value = pName name="product" class="form-control" }}
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label">Product Description</label>
+                <div class="col-md-8 inputGroupContainer">
+                  <div class="input-group">
+                    <!-- <input name="email" placeholder="E-Mail Address" class="form-control" type="text" id="emailId"> -->
+                    {{textarea cols="80" rows="6" placeholder = "description" value = pDesc name="description" class="form-control" }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Button -->
+              <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4"><br>
+                  <button type="submit" class="btn btn-warning" {{action "addProduct"}}>Add<span ></span></button>
+                </div>
+              </div>
+
+            </fieldset>
+          </form>
+        </div>
+        <!-- /.container -->
+      {{/if}}
+    </div>
+  </div>
+</div>
+
+<!-- {{#each testArray as |product|}}
+<li>hi</li>
+{{/each}} -->

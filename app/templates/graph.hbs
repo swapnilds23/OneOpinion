@@ -1,0 +1,109 @@
+<div class="container">
+<!-- <div class="jumbotron">
+  <form>
+    <label class="control-label">Question Number</label>
+    {{input type = "text" placeholder = "Please add question number" value = qNo class="form-control"}}
+  </form>
+<form action="">
+
+<div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+    <span id="abc" ></span>
+    <!-- <input name="email" placeholder="E-Mail Address" class="form-control" type="text" id="emailId"> -->
+
+  <!-- </div>
+</div>
+
+
+<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3">
+    <button class="btn btn-primary btn-lg btn-block" {{action 'render'}}>Render</button>
+</div>
+<div class="rw-xs-3">
+    <button class="btn btn-primary btn-lg btn-block" {{action 'backTo'}}>Back</button>
+</div>
+</form>
+<br/>
+<br/> -->
+
+<!-- vinay -->
+<div>
+  <div class="container col-xs-12">
+
+    <form class="well form-horizontal col-xs-12" action=" " method="post" id="contact_form">
+      <fieldset>
+        <!-- Form Name -->
+        <legend>
+          <center>
+            <h2><b>Start creating your survey</b></h2></center>
+        </legend><br>
+
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Question Number:</label>
+          <div class="col-sm-8 inputGroupContainer">
+            <div class="input-group col-sm-8">
+                {{input type = "text" placeholder = "Please add question number" value = qNo class="form-control"}}
+            </div>
+          </div>
+        </div>
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label"></label>
+          <div class="col-md-8"><br>
+            <button class="btn btn-danger" Style="width: 120px;" {{action 'render'}}>Render</button>
+
+            <button class="btn btn-primary" Style="width: 120px;" {{action 'backTo'}}>Back</button>
+              <button class="btn btn-primary" Style="width: 120px;" {{action 'clear'}}>clear</button>
+          </div>
+        </div>
+
+{{#if isRender}}
+<!-- vinay -->
+
+<!-- to display result for option1-->
+<h2 style="text-align: center">Survey report for {{productName}}</h2>
+<!-- <h2>{{option2}}</h2>
+<h2>{{counter2}}</h2> -->
+<div class="row">
+<div class="col-xs-2">
+  <h3>{{option1}}</h3>
+  </div>
+<div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:{{counter1}}%">
+  {{ceil counter1}}%
+  </div>
+</div>
+</div>
+<br/>
+
+
+<div class="row">
+<div class="col-xs-2">
+  <h3>{{option2}}</h3>
+  </div>
+<div class="progress col-xs-10">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:{{counter2}}%">
+{{ceil counter2}}%
+  </div>
+</div>
+
+</div>
+<br/>
+
+<div class="row">
+<div class="col-xs-2">
+  <h3>{{option3}}</h3>
+</div>
+<div class="progress col-xs-10  ">
+<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:{{ counter3}}%">
+{{ ceil counter3}}%
+  </div>
+</div>
+</div>
+{{/if}}
+
+      </fieldset>
+    </form>
+  </div>
+</div>
+</div>
